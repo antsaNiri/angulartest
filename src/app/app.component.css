@@ -1,0 +1,18 @@
+.blur{
+  /* transform: scale(1.1)  ; */
+  transition: transform 1s ease-out ;
+
+}
+
+.blur:hover{
+  transform: scale(1.1)  ;
+
+}
+.blaz{
+  box-shadow: 0 0 30px rgb(196, 184, 184);
+  transition: box-shadow 1s ease-out ;
+}
+
+.blaz:hover{
+  box-shadow: 0 0 30px rgb(45, 43, 43);
+}

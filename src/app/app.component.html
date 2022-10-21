@@ -1,0 +1,207 @@
+<div class="navigation mb">
+  <nav class="navbar navbar-expand-lg fixed-top " style="background-color:rgb(64, 47, 123);">
+      <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+        </div>
+
+      <div class="container-fluid">
+        <img [src]="myimage" alt="" srcset="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ms-4">
+              <a class="nav-link active " aria-current="page" href="#"><i class="fa-sharp fa-solid fa-calendar-days"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide espace mb-4" data-bs-ride="true">
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner"  >
+      <div class="carousel-item active">
+          <div class="ratio ratio-21x9">
+              <img [src]="slidePrimo" class="d-block w-100" alt="...">
+          </div>
+      </div>
+      <div class="carousel-item" *ngFor="let item of slide">
+        <div class="ratio ratio-21x9">
+            <img [src]="item" class="d-block w-100" alt="...">
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="container">
+  <div class="row mb-4 mt-4" >
+      <div class="col-12 col-sm-6 col-md-3" *ngFor="let item of compo">
+          <div class="card"  >
+              <div [ngClass]="item.rat">
+                  <img [src]="item.img" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">{{item.title}}</h5>
+                  <h5 class="card-title">{{item.price}}</h5>
+
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row text-center ">
+        <div class="col-4 mb-1 pb-2 pt-2" *ngFor="let item of content" >
+            <div class="ratio ratio-1x1 mb-3 blur"  >
+                <img [src]="item.img"  class="rounded-3 shadow-lg p-1  bg-body rounded " alt="" srcset="">
+            </div>
+            <h5 class="mb-1">{{item.title}} </h5>
+            <p class="border border-3 p-2 mb-2">{{item.contenu}}</p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="container">
+  <div class="row ">
+      <div class="col-md-6 text-center m-auto" *ngFor="let item of info" >
+          <h4>{{item.title}}</h4>
+          <p>{{item.content}}</p>
+
+      </div>
+      <div class="col-6 ">
+          <div class="ratio ratio-21x9 mb-5 " *ngFor="let item of info" >
+              <img [src]="item.img"  class="rounded blaz" style="width: 50%; margin-left: 20%; border-color: chartreuse;">
+          </div>
+
+
+      </div>
+  </div>
+</div>
+
+<footer class="bg-secondary text-white pt-5 pb-5 ">
+  <div class="container text-center ">
+    <div class="row text-center">
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <div id="carouselExampleIndicators" class="carousel slide espace mb-4" data-bs-ride="true">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="ratio ratio-21x9">
+                    <img [src]="slidePrimo" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <div class="carousel-item" *ngFor="let item of slide">
+                  <div class="ratio ratio-21x9">
+                    <img [src]="item" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-dark text-white  pt-4 mt-4">
+  <div class="container text-center ">
+      <div class="row text-center">
+          <div class="col-md-4 col-lg-3 mx-auto" *ngFor="let item of footi" >
+              <div class="ratio ratio-1x1 mx-auto" style="width: 100px;" >
+                  <img [src]="item.img" alt="..." class="rounded-circle">
+              </div>
+              <h5 class="text-uppercase mb-3" > {{item.title}} </h5>
+              <p class="">{{item.info}}</p>
+              <a href="#">Contactez-nous</a>
+          </div>
+
+      </div>
+  </div>
+</footer>
+
